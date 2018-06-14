@@ -1,22 +1,16 @@
 <?php
 
-$blogtitel1=$_REQUEST["blogtitel"];
-$naam1=$_REQUEST["naam"];
-$blogtekst1=$_REQUEST["blogtekst"];
+$blogtitel=$_REQUEST["blogtitel"];
+$naam=$_REQUEST["naam"];
+$blogtekst=$_REQUEST["blogtekst"];
 
 
-echo $blogtitel1;
-echo $naam1;
-echo $blogtekst1;
+echo $blogtitel . "<br>";
+echo $naam . "<br>";
+echo $blogtekst . "<br>";
 
 $schrijfweg = fopen("blogfile.txt", "a") or die("Unable to open file!");
-fwrite($schrijfweg, $blogtitel1 . "<br>" . $naam1 . "<br>" . $blogtekst1);
-
+fwrite($schrijfweg, "<br>" . "<br>" . $blogtitel . "\n" . "<br>" . $naam . "\n" . "<br>" . $blogtekst . "\n" . "\n");
 fclose($schrijfweg);
 
 ?>
-
-
-
-
-<!-- fwrite($schrijfweg, $naam1 . " " . $blogtekst1); -->
